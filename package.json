@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "",
   "author": "Kevin Scott",
+  "engines": {
+    "node": "6.3.0"
+  },
   "scripts": {
     "test": "BABEL_ENV=test mocha --compilers js:babel-core/register || true",
     "prod": "bnr start-prod",

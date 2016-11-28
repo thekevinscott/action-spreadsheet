@@ -5,7 +5,7 @@ import fetch from 'isomorphic-fetch';
 
 import {
   API,
-} from 'config';
+} from '../../config';
 
 /*
 function sendResponse(res, response) {

@@ -6,8 +6,8 @@ import createHistory from 'react-router/lib/createMemoryHistory';
 import { syncHistoryWithStore } from 'react-router-redux';
 import { match } from 'react-router';
 
-import createStore from 'shared/redux/createStore';
-import getRoutes from 'shared/routes';
+import createStore from '../../shared/redux/createStore';
+import getRoutes from '../../shared/routes';
 
 import { hydrateOnClient } from '../utils';
 
