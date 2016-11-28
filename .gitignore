@@ -5,6 +5,3 @@ npm-debug.log
 # webpack
 webpack-assets.json
 webpack-stats.json
-
-# build assets
-static
