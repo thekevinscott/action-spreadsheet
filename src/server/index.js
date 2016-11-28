@@ -16,6 +16,8 @@ import {
   NODE_ENV,
 } from '../config';
 
+console.log('NODE ENV', NODE_ENV);
+
 const isomorphicTools = new WebpackIsomorphicTools(toolConfig)
 .development(NODE_ENV === 'development')
 .server(rootDir, () => {

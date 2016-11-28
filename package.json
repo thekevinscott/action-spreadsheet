@@ -31,6 +31,7 @@
       "command": "concurrently --kill-others \"bnr watch-client\" \"bnr start-dev\" ",
       "env": {
         "NODE_ENV": "development",
+        "DISABLE_SERVER_RENDERING": true,
         "NODE_PATH": "./src"
       }
     },
