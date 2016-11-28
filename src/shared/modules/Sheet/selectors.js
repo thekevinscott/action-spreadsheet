@@ -5,9 +5,9 @@ import {
   search,
 } from './actions';
 
-const FIELDS_TO_SEARCH = [
-  'title',
-];
+import {
+  FIELDS,
+} from './components/Search';
 
 const parseText = text => {
   return text.split(' ').join('').toLowerCase().replace(/[^\w\s]/gi, '');
@@ -15,7 +15,7 @@ const parseText = text => {
 
 const filterEntries = (entries = [], params = {}) => {
   return entries.filter(entry => {
-    return FIELDS_TO_SEARCH.reduce((bool, key) => {
+    return FIELDS.map(field => field.name).reduce((bool, key) => {
       if (bool === false) {
         return false;
       }
@@ -27,6 +27,22 @@ const filterEntries = (entries = [], params = {}) => {
       return parseText(entry[key]).indexOf(parseText(params[key])) !== -1;
     }, true);
   });
+};
+
+const getFilters = (entries = []) => {
+  const FILTERS = [
+    'action',
+    'socialissue',
+    'level',
+  ];
+
+  return FILTERS.reduce((obj, filter) => ({
+    ...obj,
+    [filter]: Object.keys(entries.reduce((filterObj, entry) => ({
+      ...filterObj,
+      [entry[filter]]: true,
+    }), {})),
+  }), {});
 };
 
 export function mapStateToProps({ data, ui, form }, { params }) {
@@ -44,6 +60,7 @@ export function mapStateToProps({ data, ui, form }, { params }) {
     error,
     title,
     entries: filterEntries(entries, ui.search),
+    filters: getFilters(entries),
   };
 }
 

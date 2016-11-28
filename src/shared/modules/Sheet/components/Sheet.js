@@ -1,5 +1,5 @@
 import React from 'react';
-import Entry from './Entry';
+import Entries from './Entries';
 import Search from './Search';
 import {
   Jumbotron,
@@ -9,9 +9,11 @@ export default function Sheet({
   title,
   entries,
   search,
+  filters,
 }: {
   title: string,
   entries: any,
+  filters: any,
   search: any,
 }) {
   return (
@@ -24,13 +26,15 @@ export default function Sheet({
       <div className="container">
         <Search
           onChange={search}
+          filters={filters}
         />
-        {entries.map((entry, key) => (
-          <Entry
-            key={key}
-            {...entry}
+        {entries.length ? (
+          <Entries
+            entries={entries}
           />
-        ))}
+        ) : (
+          <p>No entries found.</p>
+        )}
       </div>
     </div>
   );

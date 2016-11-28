@@ -13,6 +13,7 @@ class SheetContainer extends Component {
     fetchSheet: PropTypes.func,
     title: PropTypes.string,
     entries: PropTypes.array,
+    filters: PropTypes.any,
     search: PropTypes.func,
     loading: PropTypes.bool,
     error: PropTypes.any,
@@ -29,6 +30,7 @@ class SheetContainer extends Component {
       search,
       loading,
       error,
+      filters,
     } = this.props;
 
     if (loading || !title) {
@@ -50,6 +52,7 @@ class SheetContainer extends Component {
         title={title}
         entries={entries}
         search={search}
+        filters={filters}
       />
     );
   }

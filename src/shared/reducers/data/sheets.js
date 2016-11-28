@@ -11,7 +11,7 @@ const translateSheet = sheet => {
     loading: false,
     error: null,
     title: sheet.title.$t,
-    entries: sheet.entry.map((entry, index) => {
+    entries: sheet.entry.slice(0, 2).map((entry, index) => {
       return Object.keys(entry).reduce((obj, column) => {
         if (column.indexOf('gsx$') !== -1) {
           return Object.assign({}, obj, {

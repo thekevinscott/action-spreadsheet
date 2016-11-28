@@ -12,6 +12,7 @@ export default typeToReducer({
     return {
       ...state,
       search: {
+        ...state.search,
         [key]: value,
       },
     };
