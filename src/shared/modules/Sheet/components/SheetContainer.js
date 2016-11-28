@@ -11,6 +11,7 @@ class SheetContainer extends Component {
   static propTypes = {
     params: PropTypes.any,
     fetchSheet: PropTypes.func,
+    title: PropTypes.string,
   };
 
   componentWillMount() {
@@ -18,9 +19,17 @@ class SheetContainer extends Component {
   }
 
   render() {
+    if (!this.props.title) {
+      return (
+        <div>
+          Loading
+        </div>
+      );
+    }
+
     return (
       <Sheet
-        {...this.props}
+        title={this.props.title}
       />
     );
   }

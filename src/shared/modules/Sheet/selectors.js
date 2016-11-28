@@ -5,7 +5,7 @@ import {
 } from './actions';
 
 export function mapStateToProps({ data }, { params }) {
-  const sheet = data[params.sheet_id];
+  const sheet = data[params.sheet_id] || {};
   return {
     title: sheet.title,
   };

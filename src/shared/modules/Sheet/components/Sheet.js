@@ -6,12 +6,15 @@ import {
 } from 'react-bootstrap';
 
 export default function Sheet({
+  title,
+}: {
+  title: string,
 }) {
   return (
     <div>
       <Jumbotron>
         <div className="container">
-          <h1>{this.props.title}</h1>
+          <h1>{title}</h1>
         </div>
       </Jumbotron>
       <div className="container">

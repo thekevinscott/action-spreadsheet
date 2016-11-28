@@ -1,1 +1,1 @@
-export SheetContainer from './components/SheetContainer';
+export Sheet from './components/SheetContainer';
