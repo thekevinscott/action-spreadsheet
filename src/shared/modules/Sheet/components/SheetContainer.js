@@ -12,6 +12,7 @@ class SheetContainer extends Component {
     params: PropTypes.any,
     fetchSheet: PropTypes.func,
     title: PropTypes.string,
+    entries: PropTypes.array,
   };
 
   componentWillMount() {
@@ -30,6 +31,7 @@ class SheetContainer extends Component {
     return (
       <Sheet
         title={this.props.title}
+        entries={this.props.entries}
       />
     );
   }

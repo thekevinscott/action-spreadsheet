@@ -14,7 +14,7 @@ const rootDir = path.resolve(__dirname, '../..');
 
 import {
   NODE_ENV,
-} from 'config';
+} from './config';
 
 const isomorphicTools = new WebpackIsomorphicTools(toolConfig)
 .development(NODE_ENV === 'development')

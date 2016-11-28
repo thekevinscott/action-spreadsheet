@@ -5,7 +5,7 @@ import middlewares from './middlewares';
 import {
   CLIENT,
   NODE_ENV,
-} from 'config';
+} from '../../config';
 
 const getStore = (middleware) => {
   if (NODE_ENV === 'development' && CLIENT) {

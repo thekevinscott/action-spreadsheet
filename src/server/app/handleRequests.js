@@ -24,7 +24,7 @@ import {
 import {
   NODE_ENV,
   DISABLE_SERVER_RENDERING,
-} from 'config';
+} from '../../config';
 
 /*
  * Routes a match request to the appropriate handler.

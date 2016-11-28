@@ -4,7 +4,7 @@
 import http from 'http';
 import {
   PORT,
-} from 'config';
+} from '../../config';
 
 export default (app) => {
   if (PORT) {

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import {
   CLIENT,
-} from 'config';
+} from '../../config';
 
 export default class Container extends Component {
   contextTypes : {

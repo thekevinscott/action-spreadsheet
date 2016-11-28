@@ -17,7 +17,7 @@ function isInvalid(dest) {
 import {
   NODE_ENV,
   DISABLE_SERVER_RENDERING,
-} from 'config';
+} from '../config';
 
 const alertMsg = 'Server-side React render was discarded. ' +
   'Make sure that your initial render does not ' +
