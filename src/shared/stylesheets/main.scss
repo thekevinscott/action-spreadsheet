@@ -1,3 +1,17 @@
+.jumbotron {
+  background: #532F8C;
+  color: white;
+padding-bottom: 80px; }
+.jumbotron .btn-primary {
+  background: #845ac7;
+border-color: #845ac7; }
+.jumbotron .btn-primary:hover {
+background: #7646c1; }
+.jumbotron p {
+  color: #d9ccee;
+  max-width: 75%;
+margin: 1em auto 2em; }
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 14px;
@@ -38,5 +52,17 @@ button[type="submit"] {
 form {
   .error {
     padding: 5px;
+  }
+}
+
+.panel-body {
+  h2 {
+    margin: 0 0 20px 0;
+  }
+}
+
+.search {
+  h2 {
+    margin: 0;
   }
 }

@@ -1,6 +1,7 @@
 import fetch from '../../utils/fetch';
 import {
   FETCH_SHEET,
+  SEARCH,
 } from './types';
 
 const getSheetPath = (worksheetId, type) => {
@@ -18,5 +19,13 @@ export function fetchSheet(worksheetId) {
     }).catch(err => {
       console.log('err', err);
     });
+  };
+}
+
+export function search(key, value) {
+  return {
+    type: SEARCH,
+    key,
+    value,
   };
 }

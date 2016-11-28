@@ -1,14 +1,18 @@
 import React from 'react';
+import Entry from './Entry';
+import Search from './Search';
 import {
   Jumbotron,
-  Col,
-  Row,
 } from 'react-bootstrap';
 
 export default function Sheet({
   title,
+  entries,
+  search,
 }: {
   title: string,
+  entries: any,
+  search: any,
 }) {
   return (
     <div>
@@ -18,12 +22,15 @@ export default function Sheet({
         </div>
       </Jumbotron>
       <div className="container">
-        <Row>
-          <h2>Search</h2>
-          <Col md={12} sm={12}>
-            Here is a search
-          </Col>
-        </Row>
+        <Search
+          onChange={search}
+        />
+        {entries.map((entry, key) => (
+          <Entry
+            key={key}
+            {...entry}
+          />
+        ))}
       </div>
     </div>
   );
