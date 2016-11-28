@@ -1,11 +1,3 @@
-import {
-  actions as authenticationActions,
-} from 'shared/redux/middlewares/authentication';
-
-const {
-  unauthenticate,
-} = authenticationActions;
-
 export default function fetchMiddleware({
   dispatch,
   //getState,
@@ -24,10 +16,6 @@ export default function fetchMiddleware({
     return next({
       ...action,
       promise,
-    }).catch(error => {
-      if (error.status === 401) {
-        dispatch(unauthenticate());
-      }
     });
   };
 }
