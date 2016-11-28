@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route } from 'react-router';
+import { Route, IndexRoute } from 'react-router';
 
 import Container from './redux/Container';
 import { Sheet } from './modules/Sheet';
@@ -11,6 +11,7 @@ export default () => {
       path="/"
       component={Container}
     >
+      <IndexRoute component={Sheet} />
       <Route
         path="/:sheet_id"
         component={Sheet}

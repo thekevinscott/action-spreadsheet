@@ -5,10 +5,11 @@ import {
 } from './types';
 
 const WORKSHEET_IDS = {
+  '': '1a565EvkOlMQlJgbHgRx4ToNPQ5fZodBhYmG0M-IlViU',
   'action-sheet': '1a565EvkOlMQlJgbHgRx4ToNPQ5fZodBhYmG0M-IlViU',
 };
 
-const getSheetPath = (worksheetId, type) => {
+const getSheetPath = (worksheetId = '', type) => {
   const id = WORKSHEET_IDS[worksheetId] || worksheetId;
   return `/feeds/${type}/${id}/od6/public/values?alt=json`;
 };
