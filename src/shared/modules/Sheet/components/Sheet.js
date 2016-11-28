@@ -1,6 +1,7 @@
 import React from 'react';
 import Entries from './Entries';
 import Search from './Search';
+import Footer from './Footer';
 import {
   Jumbotron,
 } from 'react-bootstrap';
@@ -36,6 +37,7 @@ export default function Sheet({
           <p>No entries found.</p>
         )}
       </div>
+      <Footer />
     </div>
   );
 }

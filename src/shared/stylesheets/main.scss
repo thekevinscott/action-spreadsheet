@@ -21,6 +21,12 @@ form {
   max-width: 280px;
 }
 
+.footer {
+  margin: 20px 0;
+  border-top: 1px solid #DDD;
+  padding: 20px 0;
+}
+
 .field {
   font-size: 16px;
   margin-bottom: 20px;
@@ -56,6 +62,8 @@ form {
 }
 
 .panel-body {
+  overflow: hidden;
+
   h2 {
     margin: 0 0 20px 0;
   }
