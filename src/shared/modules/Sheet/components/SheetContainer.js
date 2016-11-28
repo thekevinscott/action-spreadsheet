@@ -5,7 +5,7 @@ import Sheet from './Sheet';
 import {
   mapStateToProps,
   mapDispatchToProps,
-} from './selectors';
+} from '../selectors';
 
 class SheetContainer extends Component {
   static propTypes = {
