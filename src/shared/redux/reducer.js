@@ -2,7 +2,7 @@ import { combineReducers } from 'redux';
 import { routerReducer } from 'react-router-redux';
 import { reducer as formReducer } from 'redux-form';
 
-import * as reducers from 'shared/reducers';
+import * as reducers from '../reducers';
 
 export default combineReducers({
   ...reducers,

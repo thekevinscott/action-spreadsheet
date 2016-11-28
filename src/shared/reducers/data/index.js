@@ -2,7 +2,7 @@ import typeToReducer from 'type-to-reducer';
 
 import {
   FETCH_SHEET,
-} from 'shared/modules/Sheet/types';
+} from '../../modules/Sheet/types';
 
 const initialState = {};
 
