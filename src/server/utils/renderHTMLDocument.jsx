@@ -34,6 +34,9 @@ class Html extends Component {
       <html lang="en-us">
         <head>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css" />
+          <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap-theme.min.css" />
+
           {/* production only - print out stylesheets */}
           {Object.keys(assets.styles).map((style, key) => (
             <link

@@ -1,12 +1,10 @@
 /*
  * Sets up the proxy server for an external API.
  */
-//import fetch from 'isomorphic-fetch';
-import httpProxy from 'http-proxy';
+import fetch from 'isomorphic-fetch';
 
 import {
-  API_HOST,
-  API_PORT,
+  API,
 } from 'config';
 
 /*
@@ -33,17 +31,12 @@ const getBody = body => {
 */
 
 export default (app) => {
-  const API = `http://${API_HOST}:${API_PORT}`;
-
-  const proxy = httpProxy.createProxyServer({});
-
   // Proxy to API server
   app.use('/api', (req, res) => {
     const url = `${API}${req.url}`;
     console.log('prepare to proxy', url);
-
-    proxy.web(req, res, {
-      target: API,
+    fetch(url).then(response => response.json()).then(response => {
+      res.json(response);
     });
 
     /*

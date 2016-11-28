@@ -8,8 +8,7 @@ export const WEBPACK_PORT = process.env.WEBPACK_PORT || PORT + 1;
 
 export const WEBPACK_PATH = `http://${WEBPACK_HOST}:${WEBPACK_PORT}`;
 
-export const API_HOST = 'https://spreadsheets.google.com';
-export const API_PORT = '443';
+export const API = 'https://spreadsheets.google.com';
 
 export const DISABLE_SERVER_RENDERING = process.env.DISABLE_SERVER_RENDERING === 'true' || false;
 export const SERVER_RELOAD = process.env.SERVER_RELOAD || false;

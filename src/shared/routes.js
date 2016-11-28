@@ -1,8 +1,8 @@
 import React from 'react';
-import { Route, IndexRoute } from 'react-router';
+import { Route } from 'react-router';
 
 import Container from 'shared/redux/Container';
-import { Home } from 'shared/modules/Home';
+import { Sheet } from 'shared/modules/Sheet';
 //import { Page } from 'shared/modules/Page';
 
 export default () => {
@@ -11,7 +11,10 @@ export default () => {
       path="/"
       component={Container}
     >
-      <IndexRoute component={Home} />
+      <Route
+        path="/:sheet_id"
+        component={Sheet}
+      />
     </Route>
   );
 };
