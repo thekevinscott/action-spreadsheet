@@ -30,13 +30,12 @@ const filterEntries = (entries = [], params = {}) => {
 };
 
 const getFilters = (entries = []) => {
-  const FILTERS = [
-    'action',
-    'socialissue',
-    'level',
-  ];
-
-  return FILTERS.reduce((obj, filter) => ({
+  return FIELDS.filter(field => {
+    console.log(field);
+    return field.type === 'dropdown';
+  }).map(field => {
+    return field.name;
+  }).reduce((obj, filter) => ({
     ...obj,
     [filter]: Object.keys(entries.reduce((filterObj, entry) => ({
       ...filterObj,

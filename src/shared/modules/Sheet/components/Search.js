@@ -19,17 +19,18 @@ export const FIELDS = [
     type: 'dropdown',
   },
   {
-    name: 'title',
-    label: 'Title',
-  },
-  {
     name: 'type',
     label: 'Type',
+    type: 'dropdown',
   },
   {
     name: 'level',
     label: 'Level',
     type: 'dropdown',
+  },
+  {
+    name: 'title',
+    label: 'Title',
   },
   {
     name: 'notes',
@@ -41,7 +42,7 @@ const getField = ({
   name,
   label,
   type,
-}, onChange, filter) => field => {
+}, onChange, filter = []) => field => {
   const change = e => {
     onChange(name, e.target.value);
   };

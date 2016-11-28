@@ -86,8 +86,37 @@ form {
         margin-right: 0;
       }
 
+      p {
+        word-break: break-all;
+      }
+
       input, select {
         width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .search {
+    h2 {
+      display: none;
+    }
+
+    form {
+      display: block;
+
+      .field-container {
+        display: flex;
+        margin-bottom: 5px;
+
+        label {
+          width: 40%;
+        }
+      }
+      
+      input, select {
+        border: 1px solid #CCC;
       }
     }
   }
